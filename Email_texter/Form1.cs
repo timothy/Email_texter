@@ -25,13 +25,15 @@ namespace Email_texter
         //https://www.digitalocean.com/community/tutorials/how-to-use-google-s-smtp-server
         private void send_button_Click(object sender, EventArgs e)
         {
-            SmtpClient client = new SmtpClient("smtp.gmail.com", 465);// (SMTP server, port)
-            client.Credentials = new NetworkCredential(Login, Password);// user name and password
-            MailMessage msg = new MailMessage();
-            msg.From = new MailAddress(from_textBox.Text);//(from, display name)
-            msg.To.Add(new MailAddress(to_textBox.Text));// can have multiple To
+            
+            MailMessage msg = new MailMessage(from_textBox.Text, to_textBox.Text);//from/to
+           // msg.From = new MailAddress(from_textBox.Text);//(from, display name)
+           // msg.To.Add(new MailAddress(to_textBox.Text));// can have multiple To
             msg.Subject = subject_textBox.Text;
             msg.Body = message_TextBox.Text;
+            SmtpClient client = new SmtpClient("smtp.gmail.com", 465);// (SMTP server, port)
+            client.Credentials = new NetworkCredential(Login, Password);// user name and password
+            client.EnableSsl = true;
             //msg.Attachments.Add(new Attachment(@"C:/Users?My Documents/...", "application/octet-stream"));// Might have to look this one up not sure how to fully use
             try
             {
@@ -52,6 +54,7 @@ namespace Email_texter
         {
             Login = LoginUserNameTBox.Text;
             Password = LoginPassTBox.Text;
+            Login_panel.Visible = false;
         }
 
         private void sendEmailToolStripMenuItem_Click(object sender, EventArgs e)

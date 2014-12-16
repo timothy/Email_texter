@@ -41,16 +41,16 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logIntoEmailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sendEmailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.sendEmailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Login_panel = new System.Windows.Forms.Panel();
-            this.login_label = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.LoginUserNameTBox = new System.Windows.Forms.TextBox();
-            this.LoginPassTBox = new System.Windows.Forms.TextBox();
             this.Login_button = new System.Windows.Forms.Button();
+            this.LoginPassTBox = new System.Windows.Forms.TextBox();
+            this.LoginUserNameTBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.login_label = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.Login_panel.SuspendLayout();
             this.SuspendLayout();
@@ -153,9 +153,16 @@
             // logIntoEmailToolStripMenuItem
             // 
             this.logIntoEmailToolStripMenuItem.Name = "logIntoEmailToolStripMenuItem";
-            this.logIntoEmailToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.logIntoEmailToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.logIntoEmailToolStripMenuItem.Text = "Log-in";
             this.logIntoEmailToolStripMenuItem.Click += new System.EventHandler(this.logIntoEmailToolStripMenuItem_Click);
+            // 
+            // sendEmailToolStripMenuItem
+            // 
+            this.sendEmailToolStripMenuItem.Name = "sendEmailToolStripMenuItem";
+            this.sendEmailToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.sendEmailToolStripMenuItem.Text = "Send Email";
+            this.sendEmailToolStripMenuItem.Click += new System.EventHandler(this.sendEmailToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -168,15 +175,8 @@
             // aboutToolStripMenuItem
             // 
             this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(107, 22);
             this.aboutToolStripMenuItem.Text = "About";
-            // 
-            // sendEmailToolStripMenuItem
-            // 
-            this.sendEmailToolStripMenuItem.Name = "sendEmailToolStripMenuItem";
-            this.sendEmailToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.sendEmailToolStripMenuItem.Text = "Send Email";
-            this.sendEmailToolStripMenuItem.Click += new System.EventHandler(this.sendEmailToolStripMenuItem_Click);
             // 
             // Login_panel
             // 
@@ -191,24 +191,30 @@
             this.Login_panel.Size = new System.Drawing.Size(412, 507);
             this.Login_panel.TabIndex = 10;
             // 
-            // login_label
+            // Login_button
             // 
-            this.login_label.AutoSize = true;
-            this.login_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.login_label.Location = new System.Drawing.Point(111, 23);
-            this.login_label.Name = "login_label";
-            this.login_label.Size = new System.Drawing.Size(172, 24);
-            this.login_label.TabIndex = 0;
-            this.login_label.Text = "Login to your Gmail";
+            this.Login_button.Location = new System.Drawing.Point(158, 155);
+            this.Login_button.Name = "Login_button";
+            this.Login_button.Size = new System.Drawing.Size(75, 23);
+            this.Login_button.TabIndex = 5;
+            this.Login_button.Text = "Login";
+            this.Login_button.UseVisualStyleBackColor = true;
+            this.Login_button.Click += new System.EventHandler(this.Login_button_Click);
             // 
-            // label1
+            // LoginPassTBox
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 84);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "User Name:";
+            this.LoginPassTBox.Location = new System.Drawing.Point(91, 110);
+            this.LoginPassTBox.Name = "LoginPassTBox";
+            this.LoginPassTBox.PasswordChar = '*';
+            this.LoginPassTBox.Size = new System.Drawing.Size(305, 20);
+            this.LoginPassTBox.TabIndex = 4;
+            // 
+            // LoginUserNameTBox
+            // 
+            this.LoginUserNameTBox.Location = new System.Drawing.Point(91, 84);
+            this.LoginUserNameTBox.Name = "LoginUserNameTBox";
+            this.LoginUserNameTBox.Size = new System.Drawing.Size(305, 20);
+            this.LoginUserNameTBox.TabIndex = 3;
             // 
             // label2
             // 
@@ -219,29 +225,24 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "Password:";
             // 
-            // LoginUserNameTBox
+            // label1
             // 
-            this.LoginUserNameTBox.Location = new System.Drawing.Point(91, 84);
-            this.LoginUserNameTBox.Name = "LoginUserNameTBox";
-            this.LoginUserNameTBox.Size = new System.Drawing.Size(305, 20);
-            this.LoginUserNameTBox.TabIndex = 3;
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(22, 84);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "User Name:";
             // 
-            // LoginPassTBox
+            // login_label
             // 
-            this.LoginPassTBox.Location = new System.Drawing.Point(91, 110);
-            this.LoginPassTBox.Name = "LoginPassTBox";
-            this.LoginPassTBox.Size = new System.Drawing.Size(305, 20);
-            this.LoginPassTBox.TabIndex = 4;
-            // 
-            // Login_button
-            // 
-            this.Login_button.Location = new System.Drawing.Point(158, 155);
-            this.Login_button.Name = "Login_button";
-            this.Login_button.Size = new System.Drawing.Size(75, 23);
-            this.Login_button.TabIndex = 5;
-            this.Login_button.Text = "Login";
-            this.Login_button.UseVisualStyleBackColor = true;
-            this.Login_button.Click += new System.EventHandler(this.Login_button_Click);
+            this.login_label.AutoSize = true;
+            this.login_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.login_label.Location = new System.Drawing.Point(111, 23);
+            this.login_label.Name = "login_label";
+            this.login_label.Size = new System.Drawing.Size(172, 24);
+            this.login_label.TabIndex = 0;
+            this.login_label.Text = "Login to your Gmail";
             // 
             // Form1
             // 
