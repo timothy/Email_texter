@@ -1,0 +1,16 @@
+C:\Users\tbradford16\Desktop\Email_texter\Email_texter\bin\Debug\Email_texter.exe.config
+Z:\for fun\Email_texter\Email_texter\bin\Debug\Email_texter.exe.config
+Z:\for fun\Email_texter\Email_texter\bin\Debug\Email_texter.exe
+Z:\for fun\Email_texter\Email_texter\bin\Debug\Email_texter.pdb
+Z:\for fun\Email_texter\Email_texter\obj\Debug\Email_texter.csprojResolveAssemblyReference.cache
+Z:\for fun\Email_texter\Email_texter\obj\Debug\Email_texter.Form1.resources
+Z:\for fun\Email_texter\Email_texter\obj\Debug\Email_texter.Properties.Resources.resources
+Z:\for fun\Email_texter\Email_texter\obj\Debug\Email_texter.csproj.GenerateResource.Cache
+Z:\for fun\Email_texter\Email_texter\obj\Debug\Email_texter.exe
+Z:\for fun\Email_texter\Email_texter\obj\Debug\Email_texter.pdb
+E:\New folder\Email_texter\Email_texter\bin\Debug\Email_texter.exe.config
+E:\New folder\Email_texter\Email_texter\obj\Debug\Email_texter.exe
+E:\New folder\Email_texter\Email_texter\obj\Debug\Email_texter.pdb
+C:\Users\tbrad_000\Desktop\Email_texter\Email_texter\bin\Debug\Email_texter.exe.config
+C:\Users\tbrad_000\Desktop\Email_texter\Email_texter\obj\Debug\Email_texter.exe
+C:\Users\tbrad_000\Desktop\Email_texter\Email_texter\obj\Debug\Email_texter.pdb
