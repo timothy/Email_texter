@@ -18,11 +18,15 @@ namespace Email_texter
         {
             InitializeComponent();
         }
+
+        public string Login { get; set; }
+        public string Password { get; set; }
+
         //https://www.digitalocean.com/community/tutorials/how-to-use-google-s-smtp-server
         private void send_button_Click(object sender, EventArgs e)
         {
             SmtpClient client = new SmtpClient("smtp.gmail.com", 465);// (SMTP server, port)
-            client.Credentials = new NetworkCredential("userName@company.com", "password");// user name and password
+            client.Credentials = new NetworkCredential(Login, Password);// user name and password
             MailMessage msg = new MailMessage();
             msg.From = new MailAddress(from_textBox.Text);//(from, display name)
             msg.To.Add(new MailAddress(to_textBox.Text));// can have multiple To
@@ -46,7 +50,8 @@ namespace Email_texter
 
         private void Login_button_Click(object sender, EventArgs e)
         {
-
+            Login = LoginUserNameTBox.Text;
+            Password = LoginPassTBox.Text;
         }
 
         private void sendEmailToolStripMenuItem_Click(object sender, EventArgs e)
