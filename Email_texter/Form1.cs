@@ -17,8 +17,11 @@ namespace Email_texter
         public Form1()
         {
             InitializeComponent();
-        }
 
+            Login_panel.Visible = true;
+            Text_panel.Visible = false;
+        }
+        
         private string Login { get; set; }
         private string Password { get; set; }
 
@@ -66,6 +69,7 @@ namespace Email_texter
             Login = LoginUserNameTBox.Text;
             Password = LoginPassTBox.Text;
             Login_panel.Visible = false;
+            Text_panel.Visible = true;
         }
 
         private void sendEmailToolStripMenuItem_Click(object sender, EventArgs e)

@@ -44,6 +44,12 @@
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Login_panel = new System.Windows.Forms.Panel();
+            this.Login_button = new System.Windows.Forms.Button();
+            this.LoginPassTBox = new System.Windows.Forms.TextBox();
+            this.LoginUserNameTBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.login_label = new System.Windows.Forms.Label();
             this.Text_panel = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.Virgin_mobile_radio = new System.Windows.Forms.RadioButton();
@@ -60,12 +66,6 @@
             this.Phone_label = new System.Windows.Forms.Label();
             this.Texter_button = new System.Windows.Forms.Button();
             this.Texter_msg_Tbox = new System.Windows.Forms.RichTextBox();
-            this.Login_button = new System.Windows.Forms.Button();
-            this.LoginPassTBox = new System.Windows.Forms.TextBox();
-            this.LoginUserNameTBox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.login_label = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.Login_panel.SuspendLayout();
             this.Text_panel.SuspendLayout();
@@ -200,6 +200,59 @@
             this.Login_panel.Size = new System.Drawing.Size(412, 512);
             this.Login_panel.TabIndex = 10;
             // 
+            // Login_button
+            // 
+            this.Login_button.Location = new System.Drawing.Point(158, 155);
+            this.Login_button.Name = "Login_button";
+            this.Login_button.Size = new System.Drawing.Size(75, 23);
+            this.Login_button.TabIndex = 5;
+            this.Login_button.Text = "Login";
+            this.Login_button.UseVisualStyleBackColor = true;
+            this.Login_button.Click += new System.EventHandler(this.Login_button_Click);
+            // 
+            // LoginPassTBox
+            // 
+            this.LoginPassTBox.Location = new System.Drawing.Point(91, 110);
+            this.LoginPassTBox.Name = "LoginPassTBox";
+            this.LoginPassTBox.PasswordChar = '*';
+            this.LoginPassTBox.Size = new System.Drawing.Size(305, 20);
+            this.LoginPassTBox.TabIndex = 4;
+            // 
+            // LoginUserNameTBox
+            // 
+            this.LoginUserNameTBox.Location = new System.Drawing.Point(91, 84);
+            this.LoginUserNameTBox.Name = "LoginUserNameTBox";
+            this.LoginUserNameTBox.Size = new System.Drawing.Size(305, 20);
+            this.LoginUserNameTBox.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(22, 119);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(56, 13);
+            this.label2.TabIndex = 2;
+            this.label2.Text = "Password:";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(22, 84);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(63, 13);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "User Name:";
+            // 
+            // login_label
+            // 
+            this.login_label.AutoSize = true;
+            this.login_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.login_label.Location = new System.Drawing.Point(111, 23);
+            this.login_label.Name = "login_label";
+            this.login_label.Size = new System.Drawing.Size(172, 24);
+            this.login_label.TabIndex = 0;
+            this.login_label.Text = "Login to your Gmail";
+            // 
             // Text_panel
             // 
             this.Text_panel.Controls.Add(this.groupBox1);
@@ -224,9 +277,9 @@
             this.groupBox1.Controls.Add(this.US_Cellular_radio);
             this.groupBox1.Controls.Add(this.Cricket_radio);
             this.groupBox1.Controls.Add(this.Sprint_radio);
-            this.groupBox1.Location = new System.Drawing.Point(12, 31);
+            this.groupBox1.Location = new System.Drawing.Point(12, 3);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(389, 58);
+            this.groupBox1.Size = new System.Drawing.Size(389, 61);
             this.groupBox1.TabIndex = 16;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Carrier of Number";
@@ -305,14 +358,14 @@
             // 
             // Texter_subject_Tbox
             // 
-            this.Texter_subject_Tbox.Location = new System.Drawing.Point(66, 126);
+            this.Texter_subject_Tbox.Location = new System.Drawing.Point(66, 97);
             this.Texter_subject_Tbox.Name = "Texter_subject_Tbox";
             this.Texter_subject_Tbox.Size = new System.Drawing.Size(335, 20);
             this.Texter_subject_Tbox.TabIndex = 15;
             // 
             // Phone_Tbox
             // 
-            this.Phone_Tbox.Location = new System.Drawing.Point(66, 103);
+            this.Phone_Tbox.Location = new System.Drawing.Point(66, 74);
             this.Phone_Tbox.Name = "Phone_Tbox";
             this.Phone_Tbox.Size = new System.Drawing.Size(335, 20);
             this.Phone_Tbox.TabIndex = 14;
@@ -320,7 +373,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 152);
+            this.label3.Location = new System.Drawing.Point(9, 132);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(50, 13);
             this.label3.TabIndex = 13;
@@ -329,7 +382,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(14, 129);
+            this.label4.Location = new System.Drawing.Point(9, 100);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(43, 13);
             this.label4.TabIndex = 12;
@@ -338,7 +391,7 @@
             // Phone_label
             // 
             this.Phone_label.AutoSize = true;
-            this.Phone_label.Location = new System.Drawing.Point(12, 106);
+            this.Phone_label.Location = new System.Drawing.Point(9, 81);
             this.Phone_label.Name = "Phone_label";
             this.Phone_label.Size = new System.Drawing.Size(51, 13);
             this.Phone_label.TabIndex = 11;
@@ -356,64 +409,11 @@
             // 
             // Texter_msg_Tbox
             // 
-            this.Texter_msg_Tbox.Location = new System.Drawing.Point(14, 168);
+            this.Texter_msg_Tbox.Location = new System.Drawing.Point(14, 148);
             this.Texter_msg_Tbox.Name = "Texter_msg_Tbox";
-            this.Texter_msg_Tbox.Size = new System.Drawing.Size(389, 309);
+            this.Texter_msg_Tbox.Size = new System.Drawing.Size(389, 329);
             this.Texter_msg_Tbox.TabIndex = 9;
             this.Texter_msg_Tbox.Text = "";
-            // 
-            // Login_button
-            // 
-            this.Login_button.Location = new System.Drawing.Point(158, 155);
-            this.Login_button.Name = "Login_button";
-            this.Login_button.Size = new System.Drawing.Size(75, 23);
-            this.Login_button.TabIndex = 5;
-            this.Login_button.Text = "Login";
-            this.Login_button.UseVisualStyleBackColor = true;
-            this.Login_button.Click += new System.EventHandler(this.Login_button_Click);
-            // 
-            // LoginPassTBox
-            // 
-            this.LoginPassTBox.Location = new System.Drawing.Point(91, 110);
-            this.LoginPassTBox.Name = "LoginPassTBox";
-            this.LoginPassTBox.PasswordChar = '*';
-            this.LoginPassTBox.Size = new System.Drawing.Size(305, 20);
-            this.LoginPassTBox.TabIndex = 4;
-            // 
-            // LoginUserNameTBox
-            // 
-            this.LoginUserNameTBox.Location = new System.Drawing.Point(91, 84);
-            this.LoginUserNameTBox.Name = "LoginUserNameTBox";
-            this.LoginUserNameTBox.Size = new System.Drawing.Size(305, 20);
-            this.LoginUserNameTBox.TabIndex = 3;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 119);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(56, 13);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "Password:";
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 84);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(63, 13);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "User Name:";
-            // 
-            // login_label
-            // 
-            this.login_label.AutoSize = true;
-            this.login_label.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.login_label.Location = new System.Drawing.Point(111, 23);
-            this.login_label.Name = "login_label";
-            this.login_label.Size = new System.Drawing.Size(172, 24);
-            this.login_label.TabIndex = 0;
-            this.login_label.Text = "Login to your Gmail";
             // 
             // Form1
             // 
