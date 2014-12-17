@@ -22,15 +22,15 @@ namespace Email_texter
         public string Login { get; set; }
         public string Password { get; set; }
 
-        //https://www.digitalocean.com/community/tutorials/how-to-use-google-s-smtp-server
-        private void send_button_Click(object sender, EventArgs e)
+
+        public void email_init(string to)
         {
-            
+
             MailMessage msg = new MailMessage();//from/to
             msg.From = new MailAddress(Login, "Test");// Email/name of person
-            msg.To.Add(to_textBox.Text);
-           // msg.From = new MailAddress(from_textBox.Text);//(from, display name)
-           // msg.To.Add(new MailAddress(to_textBox.Text));// can have multiple To
+            msg.To.Add(to);//this is the address the message will go to
+            // msg.From = new MailAddress(from_textBox.Text);//(from, display name)
+            // msg.To.Add(new MailAddress(to_textBox.Text));// can have multiple To
             msg.Subject = subject_textBox.Text;
             msg.Body = message_TextBox.Text;
             SmtpClient client = new SmtpClient("smtp.gmail.com", 587);// (SMTP server, port)
@@ -43,10 +43,17 @@ namespace Email_texter
             {
                 client.Send(msg);
             }
-            catch(Exception dang)
+            catch (Exception dang)
             {
                 MessageBox.Show("The message did not go through due to the following error: " + dang.Message);
             }
+
+        }
+
+        //https://www.digitalocean.com/community/tutorials/how-to-use-google-s-smtp-server
+        private void send_button_Click(object sender, EventArgs e)
+        {
+            email_init(to_textBox.Text);
         }
 
         private void logIntoEmailToolStripMenuItem_Click(object sender, EventArgs e)
@@ -70,6 +77,43 @@ namespace Email_texter
         {
             Login_panel.Visible = false;
             Text_panel.Visible = true;
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Texter_button_Click(object sender, EventArgs e)
+        {
+            if (Verizon_radio.Checked == true)
+            {
+                email_init(Phone_Tbox.Text + "@vtext.com");
+            }
+            else if (ATT_radio.Checked == true)
+            {
+                email_init(Phone_Tbox.Text + "@text.att.net");
+            }
+            else if (Sprint_radio.Checked == true)
+            {
+                email_init(Phone_Tbox.Text + "@text.att.net");
+            }
+            else if (TMobile_radio.Checked == true)
+            {
+                email_init(Phone_Tbox.Text + "@tmomail.net");
+            }
+            else if (US_Cellular_radio.Checked == true)
+            {
+                email_init(Phone_Tbox.Text + "@email.uscc.net");
+            }
+            else if (Virgin_mobile_radio.Checked == true)
+            {
+                email_init(Phone_Tbox.Text + "@vmobl.com");
+            }
+            else if (Cricket_radio.Checked == true)
+            {
+                email_init(Phone_Tbox.Text + "@sms.mycricket.com");
+            }
         }
     }
 }
