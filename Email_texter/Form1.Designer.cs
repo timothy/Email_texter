@@ -40,17 +40,19 @@
             this.fileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.logIntoEmailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sendEmailToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sendTextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Login_panel = new System.Windows.Forms.Panel();
-            this.Login_button = new System.Windows.Forms.Button();
-            this.LoginPassTBox = new System.Windows.Forms.TextBox();
-            this.LoginUserNameTBox = new System.Windows.Forms.TextBox();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
-            this.login_label = new System.Windows.Forms.Label();
-            this.sendTextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Text_panel = new System.Windows.Forms.Panel();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.Virgin_mobile_radio = new System.Windows.Forms.RadioButton();
+            this.ATT_radio = new System.Windows.Forms.RadioButton();
+            this.Verizon_radio = new System.Windows.Forms.RadioButton();
+            this.TMobile_radio = new System.Windows.Forms.RadioButton();
+            this.US_Cellular_radio = new System.Windows.Forms.RadioButton();
+            this.Cricket_radio = new System.Windows.Forms.RadioButton();
+            this.Sprint_radio = new System.Windows.Forms.RadioButton();
             this.Texter_subject_Tbox = new System.Windows.Forms.TextBox();
             this.Phone_Tbox = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -58,14 +60,12 @@
             this.Phone_label = new System.Windows.Forms.Label();
             this.Texter_button = new System.Windows.Forms.Button();
             this.Texter_msg_Tbox = new System.Windows.Forms.RichTextBox();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.Sprint_radio = new System.Windows.Forms.RadioButton();
-            this.Cricket_radio = new System.Windows.Forms.RadioButton();
-            this.US_Cellular_radio = new System.Windows.Forms.RadioButton();
-            this.TMobile_radio = new System.Windows.Forms.RadioButton();
-            this.Verizon_radio = new System.Windows.Forms.RadioButton();
-            this.ATT_radio = new System.Windows.Forms.RadioButton();
-            this.Virgin_mobile_radio = new System.Windows.Forms.RadioButton();
+            this.Login_button = new System.Windows.Forms.Button();
+            this.LoginPassTBox = new System.Windows.Forms.TextBox();
+            this.LoginUserNameTBox = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.login_label = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.Login_panel.SuspendLayout();
             this.Text_panel.SuspendLayout();
@@ -155,16 +155,23 @@
             // logIntoEmailToolStripMenuItem
             // 
             this.logIntoEmailToolStripMenuItem.Name = "logIntoEmailToolStripMenuItem";
-            this.logIntoEmailToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.logIntoEmailToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.logIntoEmailToolStripMenuItem.Text = "Log-in";
             this.logIntoEmailToolStripMenuItem.Click += new System.EventHandler(this.logIntoEmailToolStripMenuItem_Click);
             // 
             // sendEmailToolStripMenuItem
             // 
             this.sendEmailToolStripMenuItem.Name = "sendEmailToolStripMenuItem";
-            this.sendEmailToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.sendEmailToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
             this.sendEmailToolStripMenuItem.Text = "Send Email";
             this.sendEmailToolStripMenuItem.Click += new System.EventHandler(this.sendEmailToolStripMenuItem_Click);
+            // 
+            // sendTextToolStripMenuItem
+            // 
+            this.sendTextToolStripMenuItem.Name = "sendTextToolStripMenuItem";
+            this.sendTextToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.sendTextToolStripMenuItem.Text = "Send Text";
+            this.sendTextToolStripMenuItem.Click += new System.EventHandler(this.sendTextToolStripMenuItem_Click);
             // 
             // helpToolStripMenuItem
             // 
@@ -182,17 +189,178 @@
             // 
             // Login_panel
             // 
-            this.Login_panel.Controls.Add(this.Text_panel);
             this.Login_panel.Controls.Add(this.Login_button);
             this.Login_panel.Controls.Add(this.LoginPassTBox);
             this.Login_panel.Controls.Add(this.LoginUserNameTBox);
             this.Login_panel.Controls.Add(this.label2);
             this.Login_panel.Controls.Add(this.label1);
             this.Login_panel.Controls.Add(this.login_label);
-            this.Login_panel.Location = new System.Drawing.Point(0, 0);
+            this.Login_panel.Location = new System.Drawing.Point(0, 27);
             this.Login_panel.Name = "Login_panel";
-            this.Login_panel.Size = new System.Drawing.Size(412, 539);
+            this.Login_panel.Size = new System.Drawing.Size(412, 512);
             this.Login_panel.TabIndex = 10;
+            // 
+            // Text_panel
+            // 
+            this.Text_panel.Controls.Add(this.groupBox1);
+            this.Text_panel.Controls.Add(this.Texter_subject_Tbox);
+            this.Text_panel.Controls.Add(this.Phone_Tbox);
+            this.Text_panel.Controls.Add(this.label3);
+            this.Text_panel.Controls.Add(this.label4);
+            this.Text_panel.Controls.Add(this.Phone_label);
+            this.Text_panel.Controls.Add(this.Texter_button);
+            this.Text_panel.Controls.Add(this.Texter_msg_Tbox);
+            this.Text_panel.Location = new System.Drawing.Point(0, 27);
+            this.Text_panel.Name = "Text_panel";
+            this.Text_panel.Size = new System.Drawing.Size(416, 523);
+            this.Text_panel.TabIndex = 6;
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.Virgin_mobile_radio);
+            this.groupBox1.Controls.Add(this.ATT_radio);
+            this.groupBox1.Controls.Add(this.Verizon_radio);
+            this.groupBox1.Controls.Add(this.TMobile_radio);
+            this.groupBox1.Controls.Add(this.US_Cellular_radio);
+            this.groupBox1.Controls.Add(this.Cricket_radio);
+            this.groupBox1.Controls.Add(this.Sprint_radio);
+            this.groupBox1.Location = new System.Drawing.Point(12, 31);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(389, 58);
+            this.groupBox1.TabIndex = 16;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Carrier of Number";
+            // 
+            // Virgin_mobile_radio
+            // 
+            this.Virgin_mobile_radio.AutoSize = true;
+            this.Virgin_mobile_radio.Location = new System.Drawing.Point(294, 37);
+            this.Virgin_mobile_radio.Name = "Virgin_mobile_radio";
+            this.Virgin_mobile_radio.Size = new System.Drawing.Size(84, 17);
+            this.Virgin_mobile_radio.TabIndex = 6;
+            this.Virgin_mobile_radio.Text = "Virgin mobile";
+            this.Virgin_mobile_radio.UseVisualStyleBackColor = true;
+            // 
+            // ATT_radio
+            // 
+            this.ATT_radio.AutoSize = true;
+            this.ATT_radio.Location = new System.Drawing.Point(36, 35);
+            this.ATT_radio.Name = "ATT_radio";
+            this.ATT_radio.Size = new System.Drawing.Size(52, 17);
+            this.ATT_radio.TabIndex = 5;
+            this.ATT_radio.Text = "AT&&T";
+            this.ATT_radio.UseVisualStyleBackColor = true;
+            // 
+            // Verizon_radio
+            // 
+            this.Verizon_radio.AutoSize = true;
+            this.Verizon_radio.Checked = true;
+            this.Verizon_radio.Location = new System.Drawing.Point(293, 14);
+            this.Verizon_radio.Name = "Verizon_radio";
+            this.Verizon_radio.Size = new System.Drawing.Size(60, 17);
+            this.Verizon_radio.TabIndex = 4;
+            this.Verizon_radio.TabStop = true;
+            this.Verizon_radio.Text = "Verizon";
+            this.Verizon_radio.UseVisualStyleBackColor = true;
+            // 
+            // TMobile_radio
+            // 
+            this.TMobile_radio.AutoSize = true;
+            this.TMobile_radio.Location = new System.Drawing.Point(203, 14);
+            this.TMobile_radio.Name = "TMobile_radio";
+            this.TMobile_radio.Size = new System.Drawing.Size(66, 17);
+            this.TMobile_radio.TabIndex = 3;
+            this.TMobile_radio.Text = "T-Mobile";
+            this.TMobile_radio.UseVisualStyleBackColor = true;
+            // 
+            // US_Cellular_radio
+            // 
+            this.US_Cellular_radio.AutoSize = true;
+            this.US_Cellular_radio.Location = new System.Drawing.Point(203, 37);
+            this.US_Cellular_radio.Name = "US_Cellular_radio";
+            this.US_Cellular_radio.Size = new System.Drawing.Size(77, 17);
+            this.US_Cellular_radio.TabIndex = 2;
+            this.US_Cellular_radio.Text = "US Cellular";
+            this.US_Cellular_radio.UseVisualStyleBackColor = true;
+            // 
+            // Cricket_radio
+            // 
+            this.Cricket_radio.AutoSize = true;
+            this.Cricket_radio.Location = new System.Drawing.Point(98, 14);
+            this.Cricket_radio.Name = "Cricket_radio";
+            this.Cricket_radio.Size = new System.Drawing.Size(58, 17);
+            this.Cricket_radio.TabIndex = 1;
+            this.Cricket_radio.Text = "Cricket";
+            this.Cricket_radio.UseVisualStyleBackColor = true;
+            // 
+            // Sprint_radio
+            // 
+            this.Sprint_radio.AutoSize = true;
+            this.Sprint_radio.Location = new System.Drawing.Point(98, 35);
+            this.Sprint_radio.Name = "Sprint_radio";
+            this.Sprint_radio.Size = new System.Drawing.Size(85, 17);
+            this.Sprint_radio.TabIndex = 0;
+            this.Sprint_radio.Text = "Sprint Nextel";
+            this.Sprint_radio.UseVisualStyleBackColor = true;
+            // 
+            // Texter_subject_Tbox
+            // 
+            this.Texter_subject_Tbox.Location = new System.Drawing.Point(66, 126);
+            this.Texter_subject_Tbox.Name = "Texter_subject_Tbox";
+            this.Texter_subject_Tbox.Size = new System.Drawing.Size(335, 20);
+            this.Texter_subject_Tbox.TabIndex = 15;
+            // 
+            // Phone_Tbox
+            // 
+            this.Phone_Tbox.Location = new System.Drawing.Point(66, 103);
+            this.Phone_Tbox.Name = "Phone_Tbox";
+            this.Phone_Tbox.Size = new System.Drawing.Size(335, 20);
+            this.Phone_Tbox.TabIndex = 14;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(12, 152);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(50, 13);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Message";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(14, 129);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(43, 13);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Subject";
+            // 
+            // Phone_label
+            // 
+            this.Phone_label.AutoSize = true;
+            this.Phone_label.Location = new System.Drawing.Point(12, 106);
+            this.Phone_label.Name = "Phone_label";
+            this.Phone_label.Size = new System.Drawing.Size(51, 13);
+            this.Phone_label.TabIndex = 11;
+            this.Phone_label.Text = "Phone #:";
+            // 
+            // Texter_button
+            // 
+            this.Texter_button.Location = new System.Drawing.Point(160, 487);
+            this.Texter_button.Name = "Texter_button";
+            this.Texter_button.Size = new System.Drawing.Size(75, 23);
+            this.Texter_button.TabIndex = 10;
+            this.Texter_button.Text = "Send";
+            this.Texter_button.UseVisualStyleBackColor = true;
+            this.Texter_button.Click += new System.EventHandler(this.Texter_button_Click);
+            // 
+            // Texter_msg_Tbox
+            // 
+            this.Texter_msg_Tbox.Location = new System.Drawing.Point(14, 168);
+            this.Texter_msg_Tbox.Name = "Texter_msg_Tbox";
+            this.Texter_msg_Tbox.Size = new System.Drawing.Size(389, 309);
+            this.Texter_msg_Tbox.TabIndex = 9;
+            this.Texter_msg_Tbox.Text = "";
             // 
             // Login_button
             // 
@@ -247,181 +415,12 @@
             this.login_label.TabIndex = 0;
             this.login_label.Text = "Login to your Gmail";
             // 
-            // sendTextToolStripMenuItem
-            // 
-            this.sendTextToolStripMenuItem.Name = "sendTextToolStripMenuItem";
-            this.sendTextToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.sendTextToolStripMenuItem.Text = "Send Text";
-            this.sendTextToolStripMenuItem.Click += new System.EventHandler(this.sendTextToolStripMenuItem_Click);
-            // 
-            // Text_panel
-            // 
-            this.Text_panel.Controls.Add(this.groupBox1);
-            this.Text_panel.Controls.Add(this.Texter_subject_Tbox);
-            this.Text_panel.Controls.Add(this.Phone_Tbox);
-            this.Text_panel.Controls.Add(this.label3);
-            this.Text_panel.Controls.Add(this.label4);
-            this.Text_panel.Controls.Add(this.Phone_label);
-            this.Text_panel.Controls.Add(this.Texter_button);
-            this.Text_panel.Controls.Add(this.Texter_msg_Tbox);
-            this.Text_panel.Location = new System.Drawing.Point(0, 3);
-            this.Text_panel.Name = "Text_panel";
-            this.Text_panel.Size = new System.Drawing.Size(416, 536);
-            this.Text_panel.TabIndex = 6;
-            // 
-            // Texter_subject_Tbox
-            // 
-            this.Texter_subject_Tbox.Location = new System.Drawing.Point(66, 98);
-            this.Texter_subject_Tbox.Name = "Texter_subject_Tbox";
-            this.Texter_subject_Tbox.Size = new System.Drawing.Size(335, 20);
-            this.Texter_subject_Tbox.TabIndex = 15;
-            // 
-            // Phone_Tbox
-            // 
-            this.Phone_Tbox.Location = new System.Drawing.Point(66, 67);
-            this.Phone_Tbox.Name = "Phone_Tbox";
-            this.Phone_Tbox.Size = new System.Drawing.Size(335, 20);
-            this.Phone_Tbox.TabIndex = 14;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(14, 132);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(50, 13);
-            this.label3.TabIndex = 13;
-            this.label3.Text = "Message";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(14, 101);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(43, 13);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "Subject";
-            // 
-            // Phone_label
-            // 
-            this.Phone_label.AutoSize = true;
-            this.Phone_label.Location = new System.Drawing.Point(14, 70);
-            this.Phone_label.Name = "Phone_label";
-            this.Phone_label.Size = new System.Drawing.Size(51, 13);
-            this.Phone_label.TabIndex = 11;
-            this.Phone_label.Text = "Phone #:";
-            // 
-            // Texter_button
-            // 
-            this.Texter_button.Location = new System.Drawing.Point(160, 500);
-            this.Texter_button.Name = "Texter_button";
-            this.Texter_button.Size = new System.Drawing.Size(75, 23);
-            this.Texter_button.TabIndex = 10;
-            this.Texter_button.Text = "Send";
-            this.Texter_button.UseVisualStyleBackColor = true;
-            this.Texter_button.Click += new System.EventHandler(this.Texter_button_Click);
-            // 
-            // Texter_msg_Tbox
-            // 
-            this.Texter_msg_Tbox.Location = new System.Drawing.Point(14, 150);
-            this.Texter_msg_Tbox.Name = "Texter_msg_Tbox";
-            this.Texter_msg_Tbox.Size = new System.Drawing.Size(389, 344);
-            this.Texter_msg_Tbox.TabIndex = 9;
-            this.Texter_msg_Tbox.Text = "";
-            // 
-            // groupBox1
-            // 
-            this.groupBox1.Controls.Add(this.Virgin_mobile_radio);
-            this.groupBox1.Controls.Add(this.ATT_radio);
-            this.groupBox1.Controls.Add(this.Verizon_radio);
-            this.groupBox1.Controls.Add(this.TMobile_radio);
-            this.groupBox1.Controls.Add(this.US_Cellular_radio);
-            this.groupBox1.Controls.Add(this.Cricket_radio);
-            this.groupBox1.Controls.Add(this.Sprint_radio);
-            this.groupBox1.Location = new System.Drawing.Point(12, 3);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(389, 58);
-            this.groupBox1.TabIndex = 16;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Carrier of Number";
-            this.groupBox1.Enter += new System.EventHandler(this.groupBox1_Enter);
-            // 
-            // Sprint_radio
-            // 
-            this.Sprint_radio.AutoSize = true;
-            this.Sprint_radio.Location = new System.Drawing.Point(98, 35);
-            this.Sprint_radio.Name = "Sprint_radio";
-            this.Sprint_radio.Size = new System.Drawing.Size(85, 17);
-            this.Sprint_radio.TabIndex = 0;
-            this.Sprint_radio.Text = "Sprint Nextel";
-            this.Sprint_radio.UseVisualStyleBackColor = true;
-            // 
-            // Cricket_radio
-            // 
-            this.Cricket_radio.AutoSize = true;
-            this.Cricket_radio.Location = new System.Drawing.Point(98, 14);
-            this.Cricket_radio.Name = "Cricket_radio";
-            this.Cricket_radio.Size = new System.Drawing.Size(58, 17);
-            this.Cricket_radio.TabIndex = 1;
-            this.Cricket_radio.Text = "Cricket";
-            this.Cricket_radio.UseVisualStyleBackColor = true;
-            // 
-            // US_Cellular_radio
-            // 
-            this.US_Cellular_radio.AutoSize = true;
-            this.US_Cellular_radio.Location = new System.Drawing.Point(203, 37);
-            this.US_Cellular_radio.Name = "US_Cellular_radio";
-            this.US_Cellular_radio.Size = new System.Drawing.Size(77, 17);
-            this.US_Cellular_radio.TabIndex = 2;
-            this.US_Cellular_radio.Text = "US Cellular";
-            this.US_Cellular_radio.UseVisualStyleBackColor = true;
-            // 
-            // TMobile_radio
-            // 
-            this.TMobile_radio.AutoSize = true;
-            this.TMobile_radio.Location = new System.Drawing.Point(203, 14);
-            this.TMobile_radio.Name = "TMobile_radio";
-            this.TMobile_radio.Size = new System.Drawing.Size(66, 17);
-            this.TMobile_radio.TabIndex = 3;
-            this.TMobile_radio.Text = "T-Mobile";
-            this.TMobile_radio.UseVisualStyleBackColor = true;
-            // 
-            // Verizon_radio
-            // 
-            this.Verizon_radio.AutoSize = true;
-            this.Verizon_radio.Checked = true;
-            this.Verizon_radio.Location = new System.Drawing.Point(293, 14);
-            this.Verizon_radio.Name = "Verizon_radio";
-            this.Verizon_radio.Size = new System.Drawing.Size(60, 17);
-            this.Verizon_radio.TabIndex = 4;
-            this.Verizon_radio.TabStop = true;
-            this.Verizon_radio.Text = "Verizon";
-            this.Verizon_radio.UseVisualStyleBackColor = true;
-            // 
-            // ATT_radio
-            // 
-            this.ATT_radio.AutoSize = true;
-            this.ATT_radio.Location = new System.Drawing.Point(36, 35);
-            this.ATT_radio.Name = "ATT_radio";
-            this.ATT_radio.Size = new System.Drawing.Size(52, 17);
-            this.ATT_radio.TabIndex = 5;
-            this.ATT_radio.Text = "AT&&T";
-            this.ATT_radio.UseVisualStyleBackColor = true;
-            // 
-            // Virgin_mobile_radio
-            // 
-            this.Virgin_mobile_radio.AutoSize = true;
-            this.Virgin_mobile_radio.Location = new System.Drawing.Point(294, 37);
-            this.Virgin_mobile_radio.Name = "Virgin_mobile_radio";
-            this.Virgin_mobile_radio.Size = new System.Drawing.Size(84, 17);
-            this.Virgin_mobile_radio.TabIndex = 6;
-            this.Virgin_mobile_radio.Text = "Virgin mobile";
-            this.Virgin_mobile_radio.UseVisualStyleBackColor = true;
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(416, 539);
+            this.ClientSize = new System.Drawing.Size(416, 551);
+            this.Controls.Add(this.Text_panel);
             this.Controls.Add(this.Login_panel);
             this.Controls.Add(this.subject_textBox);
             this.Controls.Add(this.to_textBox);
