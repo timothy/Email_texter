@@ -29,11 +29,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.from_textBox = new System.Windows.Forms.TextBox();
             this.message_TextBox = new System.Windows.Forms.RichTextBox();
             this.send_button = new System.Windows.Forms.Button();
             this.to_label = new System.Windows.Forms.Label();
-            this.from_label = new System.Windows.Forms.Label();
             this.subject_label = new System.Windows.Forms.Label();
             this.message_label = new System.Windows.Forms.Label();
             this.to_textBox = new System.Windows.Forms.TextBox();
@@ -51,22 +49,16 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.login_label = new System.Windows.Forms.Label();
+            this.sendTextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.Login_panel.SuspendLayout();
             this.SuspendLayout();
             // 
-            // from_textBox
-            // 
-            this.from_textBox.Location = new System.Drawing.Point(61, 73);
-            this.from_textBox.Name = "from_textBox";
-            this.from_textBox.Size = new System.Drawing.Size(340, 20);
-            this.from_textBox.TabIndex = 0;
-            // 
             // message_TextBox
             // 
-            this.message_TextBox.Location = new System.Drawing.Point(12, 143);
+            this.message_TextBox.Location = new System.Drawing.Point(12, 127);
             this.message_TextBox.Name = "message_TextBox";
-            this.message_TextBox.Size = new System.Drawing.Size(389, 328);
+            this.message_TextBox.Size = new System.Drawing.Size(389, 344);
             this.message_TextBox.TabIndex = 1;
             this.message_TextBox.Text = "";
             // 
@@ -89,19 +81,10 @@
             this.to_label.TabIndex = 3;
             this.to_label.Text = "To:";
             // 
-            // from_label
-            // 
-            this.from_label.AutoSize = true;
-            this.from_label.Location = new System.Drawing.Point(12, 73);
-            this.from_label.Name = "from_label";
-            this.from_label.Size = new System.Drawing.Size(33, 13);
-            this.from_label.TabIndex = 4;
-            this.from_label.Text = "From:";
-            // 
             // subject_label
             // 
             this.subject_label.AutoSize = true;
-            this.subject_label.Location = new System.Drawing.Point(12, 103);
+            this.subject_label.Location = new System.Drawing.Point(12, 78);
             this.subject_label.Name = "subject_label";
             this.subject_label.Size = new System.Drawing.Size(43, 13);
             this.subject_label.TabIndex = 5;
@@ -110,7 +93,7 @@
             // message_label
             // 
             this.message_label.AutoSize = true;
-            this.message_label.Location = new System.Drawing.Point(12, 127);
+            this.message_label.Location = new System.Drawing.Point(12, 109);
             this.message_label.Name = "message_label";
             this.message_label.Size = new System.Drawing.Size(50, 13);
             this.message_label.TabIndex = 6;
@@ -125,7 +108,7 @@
             // 
             // subject_textBox
             // 
-            this.subject_textBox.Location = new System.Drawing.Point(61, 99);
+            this.subject_textBox.Location = new System.Drawing.Point(61, 75);
             this.subject_textBox.Name = "subject_textBox";
             this.subject_textBox.Size = new System.Drawing.Size(340, 20);
             this.subject_textBox.TabIndex = 8;
@@ -145,7 +128,8 @@
             // 
             this.fileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.logIntoEmailToolStripMenuItem,
-            this.sendEmailToolStripMenuItem});
+            this.sendEmailToolStripMenuItem,
+            this.sendTextToolStripMenuItem});
             this.fileToolStripMenuItem.Name = "fileToolStripMenuItem";
             this.fileToolStripMenuItem.Size = new System.Drawing.Size(37, 20);
             this.fileToolStripMenuItem.Text = "File";
@@ -153,14 +137,14 @@
             // logIntoEmailToolStripMenuItem
             // 
             this.logIntoEmailToolStripMenuItem.Name = "logIntoEmailToolStripMenuItem";
-            this.logIntoEmailToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.logIntoEmailToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.logIntoEmailToolStripMenuItem.Text = "Log-in";
             this.logIntoEmailToolStripMenuItem.Click += new System.EventHandler(this.logIntoEmailToolStripMenuItem_Click);
             // 
             // sendEmailToolStripMenuItem
             // 
             this.sendEmailToolStripMenuItem.Name = "sendEmailToolStripMenuItem";
-            this.sendEmailToolStripMenuItem.Size = new System.Drawing.Size(132, 22);
+            this.sendEmailToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.sendEmailToolStripMenuItem.Text = "Send Email";
             this.sendEmailToolStripMenuItem.Click += new System.EventHandler(this.sendEmailToolStripMenuItem_Click);
             // 
@@ -244,6 +228,12 @@
             this.login_label.TabIndex = 0;
             this.login_label.Text = "Login to your Gmail";
             // 
+            // sendTextToolStripMenuItem
+            // 
+            this.sendTextToolStripMenuItem.Name = "sendTextToolStripMenuItem";
+            this.sendTextToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.sendTextToolStripMenuItem.Text = "Send Text";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -254,11 +244,9 @@
             this.Controls.Add(this.to_textBox);
             this.Controls.Add(this.message_label);
             this.Controls.Add(this.subject_label);
-            this.Controls.Add(this.from_label);
             this.Controls.Add(this.to_label);
             this.Controls.Add(this.send_button);
             this.Controls.Add(this.message_TextBox);
-            this.Controls.Add(this.from_textBox);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
@@ -274,11 +262,9 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox from_textBox;
         private System.Windows.Forms.RichTextBox message_TextBox;
         private System.Windows.Forms.Button send_button;
         private System.Windows.Forms.Label to_label;
-        private System.Windows.Forms.Label from_label;
         private System.Windows.Forms.Label subject_label;
         private System.Windows.Forms.Label message_label;
         private System.Windows.Forms.TextBox to_textBox;
@@ -296,6 +282,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label login_label;
+        private System.Windows.Forms.ToolStripMenuItem sendTextToolStripMenuItem;
     }
 }
 

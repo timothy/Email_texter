@@ -1,0 +1,20 @@
+AT&T: 1234567890@text.att.net 
+Cricket: 1234567890@sms.mycricket.com
+Sprint Nextel: 1234567890@messaging.sprintpcs.com
+T-Mobile: 1234567890@tmomail.net
+US Cellular: 1234567890@email.USCc.ne 
+Verizon: 1234567890@vtext.com
+Virgin mobile: 1234567890@vmobl.com
+
+
+https://www.instavin.com/viewReport.php?r=29d628532c2870583bff19d41f6e546b4e91bbf5
+
+
+
+        [TestMethod]
+        public void inclusive()
+        {
+            var a = new CompleteBipartiteGraph(5, 5, Directedness.Directed);
+
+            Assert.AreEqual(5, a.GetBlueNode(0));
+        }
