@@ -83,7 +83,7 @@
             // to_label
             // 
             this.to_label.AutoSize = true;
-            this.to_label.Location = new System.Drawing.Point(12, 58);
+            this.to_label.Location = new System.Drawing.Point(12, 47);
             this.to_label.Name = "to_label";
             this.to_label.Size = new System.Drawing.Size(23, 13);
             this.to_label.TabIndex = 3;
@@ -92,7 +92,7 @@
             // from_label
             // 
             this.from_label.AutoSize = true;
-            this.from_label.Location = new System.Drawing.Point(12, 80);
+            this.from_label.Location = new System.Drawing.Point(12, 73);
             this.from_label.Name = "from_label";
             this.from_label.Size = new System.Drawing.Size(33, 13);
             this.from_label.TabIndex = 4;
@@ -188,7 +188,7 @@
             this.Login_panel.Controls.Add(this.login_label);
             this.Login_panel.Location = new System.Drawing.Point(0, 27);
             this.Login_panel.Name = "Login_panel";
-            this.Login_panel.Size = new System.Drawing.Size(412, 507);
+            this.Login_panel.Size = new System.Drawing.Size(412, 512);
             this.Login_panel.TabIndex = 10;
             // 
             // Login_button
