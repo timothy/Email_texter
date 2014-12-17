@@ -65,5 +65,11 @@ namespace Email_texter
         {
             Login_panel.Visible = false;
         }
+
+        private void sendTextToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Login_panel.Visible = false;
+            Text_panel.Visible = true;
+        }
     }
 }

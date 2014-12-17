@@ -50,8 +50,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.login_label = new System.Windows.Forms.Label();
             this.sendTextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Text_panel = new System.Windows.Forms.Panel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.Phone_label = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.menuStrip1.SuspendLayout();
             this.Login_panel.SuspendLayout();
+            this.Text_panel.SuspendLayout();
             this.SuspendLayout();
             // 
             // message_TextBox
@@ -164,15 +174,16 @@
             // 
             // Login_panel
             // 
+            this.Login_panel.Controls.Add(this.Text_panel);
             this.Login_panel.Controls.Add(this.Login_button);
             this.Login_panel.Controls.Add(this.LoginPassTBox);
             this.Login_panel.Controls.Add(this.LoginUserNameTBox);
             this.Login_panel.Controls.Add(this.label2);
             this.Login_panel.Controls.Add(this.label1);
             this.Login_panel.Controls.Add(this.login_label);
-            this.Login_panel.Location = new System.Drawing.Point(0, 27);
+            this.Login_panel.Location = new System.Drawing.Point(0, 0);
             this.Login_panel.Name = "Login_panel";
-            this.Login_panel.Size = new System.Drawing.Size(412, 512);
+            this.Login_panel.Size = new System.Drawing.Size(412, 539);
             this.Login_panel.TabIndex = 10;
             // 
             // Login_button
@@ -233,6 +244,89 @@
             this.sendTextToolStripMenuItem.Name = "sendTextToolStripMenuItem";
             this.sendTextToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.sendTextToolStripMenuItem.Text = "Send Text";
+            this.sendTextToolStripMenuItem.Click += new System.EventHandler(this.sendTextToolStripMenuItem_Click);
+            // 
+            // Text_panel
+            // 
+            this.Text_panel.Controls.Add(this.groupBox1);
+            this.Text_panel.Controls.Add(this.textBox1);
+            this.Text_panel.Controls.Add(this.textBox2);
+            this.Text_panel.Controls.Add(this.label3);
+            this.Text_panel.Controls.Add(this.label4);
+            this.Text_panel.Controls.Add(this.Phone_label);
+            this.Text_panel.Controls.Add(this.button1);
+            this.Text_panel.Controls.Add(this.richTextBox1);
+            this.Text_panel.Location = new System.Drawing.Point(0, 3);
+            this.Text_panel.Name = "Text_panel";
+            this.Text_panel.Size = new System.Drawing.Size(416, 536);
+            this.Text_panel.TabIndex = 6;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(66, 98);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(340, 20);
+            this.textBox1.TabIndex = 15;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(66, 67);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(340, 20);
+            this.textBox2.TabIndex = 14;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(14, 132);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(50, 13);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Message";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(14, 101);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(43, 13);
+            this.label4.TabIndex = 12;
+            this.label4.Text = "Subject";
+            // 
+            // Phone_label
+            // 
+            this.Phone_label.AutoSize = true;
+            this.Phone_label.Location = new System.Drawing.Point(14, 70);
+            this.Phone_label.Name = "Phone_label";
+            this.Phone_label.Size = new System.Drawing.Size(51, 13);
+            this.Phone_label.TabIndex = 11;
+            this.Phone_label.Text = "Phone #:";
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(160, 500);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 10;
+            this.button1.Text = "Send";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(14, 150);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(389, 344);
+            this.richTextBox1.TabIndex = 9;
+            this.richTextBox1.Text = "";
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Location = new System.Drawing.Point(17, 3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(384, 58);
+            this.groupBox1.TabIndex = 16;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "groupBox1";
             // 
             // Form1
             // 
@@ -255,6 +349,8 @@
             this.menuStrip1.PerformLayout();
             this.Login_panel.ResumeLayout(false);
             this.Login_panel.PerformLayout();
+            this.Text_panel.ResumeLayout(false);
+            this.Text_panel.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -283,6 +379,15 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label login_label;
         private System.Windows.Forms.ToolStripMenuItem sendTextToolStripMenuItem;
+        private System.Windows.Forms.Panel Text_panel;
+        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label Phone_label;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.RichTextBox richTextBox1;
     }
 }
 
